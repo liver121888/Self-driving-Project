@@ -26,5 +26,5 @@ def read_tracking(path):
     df = pd.read_csv(path, header=None, sep=' ')
     df.columns = TRACKING_COLUMN_NAMES
     df.loc[df.type.isin(['Truck', 'Van', 'Tram']), 'type'] = 'Car'
-    df = df[df.type.isin(['Car', 'Pedestrain', 'Cyclist'])]
+    df = df[df.type.isin(['Car', 'Pedestrian', 'Cyclist'])]
     return df
